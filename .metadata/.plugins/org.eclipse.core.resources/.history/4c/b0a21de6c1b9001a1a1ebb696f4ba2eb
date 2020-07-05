@@ -1,0 +1,43 @@
+package algorithmicProblemSolvingStrategies;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class No1149 {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		int N = scan.nextInt();
+		int[][] rgb = new int[N][3];
+		int[] dp = new int[N];
+		Arrays.fill(dp, 0);
+		for(int i = 0; i< N; i++) {
+			rgb[i][0] = scan.nextInt();
+			rgb[i][1] = scan.nextInt();
+			rgb[i][2] = scan.nextInt();
+		}
+		scan.close();
+		
+		int min = rgb[0][0] < rgb[0][1] ? 0 : 1 ;
+		min = rgb[0][1] < min ? 1 : min;
+		dp[0] = rgb[0][min];
+		for(int i = 1; i < N; i++) {
+			if(min == 0 ) {
+				if( rgb[i][1] <= rgb[i][2] ) min = 1;
+				else min = 2;
+			}
+			else if(min == 1 ) {
+				if( rgb[i][0] <= rgb[i][2] ) min = 0;
+				else min = 2;
+			}
+			else if(min == 2 ) {
+				if( rgb[i][0] <= rgb[i][1] ) min = 0;
+				else min = 1;
+			}
+			dp[i] = dp[i-1] + rgb[i][min];
+		}
+		System.out.println(dp[N-1]);
+	}
+
+}
