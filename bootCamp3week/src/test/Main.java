@@ -11,7 +11,7 @@ import test.DAO;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println(new DAO().getSession());
+		//System.out.println(new DAO().getSession());
 		
 		DAO dao = new DAO();
 		//dao.tableTruncate();

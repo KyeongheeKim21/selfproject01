@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper">
+	<delete id="truncate" >
+		TRUNCATE TABLE TEST03.TBL_LT_INF
+	</delete>
+	
+	<insert id="insert">
+		INSERT INTO TEST03.TBL_LT_INF
+			SELECT *
+  			FROM TEST01.TBL_LT_INF
+	</insert>
+	
+	<update id="merge">
+		<!-- -->
+		MERGE INTO TEST03.TBL_LT_INF t3 
+		USING TEST02.TBL_LT_INF t2 
+			ON (t3.fa_id = t2.fa_id 
+				and t3.lt_id = t2.lt_id 
+				and t3.prod_id = t2.prod_id) 
+		
+		WHEN NOT MATCHED THEN 
+		INSERT(
+		FA_ID
+		,LT_ID
+		,PROD_ID
+		,FL_ID
+		,OP_ID
+		,TIMEKEY
+		,CHG_TM
+		, CRT_TM
+		) values (
+		t2.FA_ID
+		,t2.LT_ID
+		,t2.PROD_ID
+		,t2.FL_ID
+		,t2.OP_ID
+		,t2.TIMEKEY
+		,t2.CHG_TM
+		, t2.CRT_TM
+		)
+	</update>
+	
+	<select id="check" resultType="test.DTO">
+		select * from TEST03.TBL_LT_INF
+	</select>
+	<select id="countCheck" resultType="int">
+		select count(*) from TEST03.TBL_LT_INF
+	</select>
+</mapper>
