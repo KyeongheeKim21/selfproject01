@@ -4,26 +4,28 @@ public class DTO {
 	private String FA_ID;
 	private String LT_ID;
 	private String PROD_ID;
+	private String TIMEKEY;
 	private String FL_ID;
 	private String OP_ID;
-	private String TIMEKEY;
-	private String CHG_TM;
-	private String CRT_TM;
+	private String STAT_CD;
+	private String STAT_TYP;
 	
 	public DTO() {
 		super();
 	}
-	public DTO(String fA_ID, String lT_ID, String pROD_ID, String fL_ID, String oP_ID, String tIMEKEY, String cHG_TM,
-			String cRT_TM) {
+	public DTO(String fA_ID, String lT_ID, String pROD_ID, String fL_ID, String oP_ID, String tIMEKEY
+			, String sTAT_CD,String sTAT_TYP) {
 		super();
 		this.FA_ID = fA_ID;
 		this.LT_ID = lT_ID;
 		this.PROD_ID = pROD_ID;
+		//String[] arr = tIMEKEY.split(".");
+		//this.TIMEKEY = arr[0];
+		this.TIMEKEY = tIMEKEY.substring(0, 12);
 		this.FL_ID = fL_ID;
 		this.OP_ID = oP_ID;
-		this.TIMEKEY = tIMEKEY;
-		this.CHG_TM = cHG_TM;
-		this.CRT_TM = cRT_TM;
+		this.STAT_CD = sTAT_CD;
+		this.STAT_TYP = sTAT_TYP;
 	}
 	public String getFA_ID() {
 		return FA_ID;
@@ -59,24 +61,25 @@ public class DTO {
 		return TIMEKEY;
 	}
 	public void setTIMEKEY(String tIMEKEY) {
-		TIMEKEY = tIMEKEY;
+		//String[] arr = tIMEKEY.split(".");
+		TIMEKEY = tIMEKEY.substring(0, 12);//arr[0];
 	}
-	public String getCHG_TM() {
-		return CHG_TM;
+	public String getSTAT_CD() {
+		return STAT_CD;
 	}
-	public void setCHG_TM(String cHG_TM) {
-		CHG_TM = cHG_TM;
+	public void setSTAT_CD(String sTAT_CD) {
+		STAT_CD = sTAT_CD;
 	}
-	public String getCRT_TM() {
-		return CRT_TM;
+	public String getSTAT_TYP() {
+		return STAT_TYP;
 	}
-	public void setCRT_TM(String cRT_TM) {
-		CRT_TM = cRT_TM;
+	public void setSTAT_TYP(String sTAT_TYP) {
+		STAT_TYP = sTAT_TYP;
 	}
 	@Override
 	public String toString() {
 		return "DTO [FA_ID=" + FA_ID + ", LT_ID=" + LT_ID + ", PROD_ID=" + PROD_ID + ", FL_ID=" + FL_ID + ", OP_ID="
-				+ OP_ID + ", TIMEKEY=" + TIMEKEY + ", CHG_TM=" + CHG_TM + ", CRT_TM=" + CRT_TM + "]";
+				+ OP_ID + ", TIMEKEY=" + TIMEKEY + ", STAT_CD=" + STAT_CD + ", STAT_TYP=" + STAT_TYP + "]";
 	}
 	
 }

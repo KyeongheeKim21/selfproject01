@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: bootCamp4week
+Bundle-SymbolicName: bootCamp4week
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: bootCamp4week.jar,
+ Java/mybatis-3.5.5/mybatis-3.5.5.jar,
+ Java/poi-4.1.2/poi-4.1.2.jar,
+ Java/poi-4.1.2/poi-examples-4.1.2.jar,
+ Java/poi-4.1.2/poi-excelant-4.1.2.jar,
+ Java/poi-4.1.2/poi-ooxml-4.1.2.jar,
+ Java/poi-4.1.2/poi-ooxml-schemas-4.1.2.jar,
+ Java/poi-4.1.2/poi-scratchpad-4.1.2.jar,
+ Java/poi-4.1.2/ooxml-lib/curvesapi-1.06.jar,
+ Java/poi-4.1.2/ooxml-lib/xmlbeans-3.1.0.jar
+Export-Package: test
