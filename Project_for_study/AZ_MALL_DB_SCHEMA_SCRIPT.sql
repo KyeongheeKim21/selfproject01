@@ -23,3 +23,5 @@ create table AZ_MANAGER.ORDERS
     constraint fk_ICODE foreign key(iCode) references AZ_MANAGER.ITEMS(iCode) on delete cascade
 );
 commit;
+
+alter table AZ_MANAGER.ORDERS add itemCnt number not null;
