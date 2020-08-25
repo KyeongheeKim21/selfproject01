@@ -3,6 +3,7 @@ package layout;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import application.CreateUser;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -47,6 +48,17 @@ public class LoginController implements Initializable{
 		pw.setVisible(false);
 		loginBtn.setVisible(false);
 		
+	}
+	public void handleSignUpAction(ActionEvent event) {
+		//pop up
+		CreateUser cu = new CreateUser(id.getText(),pw.getText());
+		if(cu.getCondition() == 2) {
+			//already exist code
+			System.out.println("already exist. ("+id.getText()+" "+pw.getText()+")");
+		}
+		else if(cu.getCondition() != 0) {
+			System.err.println("err code: "+cu.getCondition());
+		}/**/
 	}
 	public void AClick(ActionEvent event) {
 		items.getItems().clear();
