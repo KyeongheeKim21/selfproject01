@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="layout.LoginController">
+<ScrollPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="layout.Controller">
    <content>
       <BorderPane>
       	<!-- TODO Add Nodes prefHeight="80" prefWidth="100" <children></children>-->
@@ -48,7 +48,7 @@
       	</HBox>
       	<HBox>
       	<Label prefWidth="20.0" />
-                     <Button alignment="CENTER" contentDisplay="CENTER" onAction="#handleSignUpAction" prefHeight="22.0" prefWidth="112.0" text="Sign Up" />
+                     <Button alignment="CENTER" contentDisplay="CENTER" onAction="#clickedSignUpBtn" prefHeight="22.0" prefWidth="112.0" text="Sign Up" />
       	<Button fx:id="loginBtn" alignment="CENTER" contentDisplay="CENTER" onAction="#handleLoginAction" prefHeight="22.0" prefWidth="112.0" text="Sign In">
                         <HBox.margin>
                            <Insets left="30.0" />
@@ -70,10 +70,10 @@
       	<VBox alignment="TOP_CENTER" prefWidth="1200">
       	<children>
       	<HBox prefWidth="1000" spacing="15.0">
-      	<Button onAction="#AClick" prefHeight="45.0" prefWidth="200.0" text="A ~" />
-      	<Button onAction="#HClick" prefHeight="45.0" prefWidth="200.0" text="H ~" />
-      	<Button onAction="#OClick" prefHeight="45.0" prefWidth="200.0" text="O ~" />
-      	<Button onAction="#VClick" prefHeight="45.0" prefWidth="200.0" text="V ~" />
+      	<Button onAction="#Click" prefHeight="45.0" prefWidth="200.0" text="A ~" />
+      	<Button onAction="#Click" prefHeight="45.0" prefWidth="200.0" text="H ~" />
+      	<Button onAction="#Click" prefHeight="45.0" prefWidth="200.0" text="O ~" />
+      	<Button onAction="#Click" prefHeight="45.0" prefWidth="200.0" text="V ~" />
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
@@ -94,7 +94,7 @@
             </HBox.margin> 	
       	</Label>
       	<Button onAction="#basket" prefHeight="50.0" prefWidth="100.0" text="Put BUY List">
-      		<HBox.margin>
+      		<HBox.margin><!--  -->
       			<Insets left="35.0" top="30.0" />
             </HBox.margin>
       	</Button>

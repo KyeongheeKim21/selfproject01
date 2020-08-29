@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper">
+	<!-- <select id="extract_excel" parameterType = "String" resultType ="test.DTO">
+		SELECT * 
+		FROM TEST01.TBL_LT_HIS
+		WHERE STAT_TYP = #{value}
+	</select>
+	<select id="distinct_STAT_TYP" resultType="String">
+		SELECT DISTINCT(STAT_TYP) 
+		FROM TEST01.TBL_LT_HIS
+	</select> 
+	
+	
+	-->
+	<insert id="uploadItem" parameterType="itemInputDBApplication.DTO">
+		INSERT INTO AZ_MANAGER.ITEMS (ICODE,NAME,PRICE) 
+		values (#{iCode}, #{name},#{price})
+	</insert>
+</mapper>
