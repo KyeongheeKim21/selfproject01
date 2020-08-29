@@ -9,7 +9,7 @@ public class No2588{
 		
 		int no1 = scan.nextInt();
 		int no2 = scan.nextInt();
-		
+		scan.close();
 		System.out.println(no1 * (no2%10));
 		System.out.println(no1 * (no2%100)/10);
 		System.out.println(no1 * (no2/100));

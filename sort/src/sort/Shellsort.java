@@ -34,7 +34,7 @@ public class Shellsort {
 			x[i] = stdIn.nextInt();
 
 		}
-		
+		stdIn.close();
 		shellSort(x,nx);
 		
 		System.out.println("오름차순으로 정렬했습니다.");

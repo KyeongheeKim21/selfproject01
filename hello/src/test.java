@@ -10,16 +10,16 @@ public class test {
 		
 		int test = scan.nextInt();
 		//test[] example = new test[];
-		
+		scan.close();
 		for(int i = 0;i < test; i++) {
 			
 		}
 		
 	}
 	
-	private void test() {
+	/*private void test() {
 		
 		
-	}
+	}*/
 
 }

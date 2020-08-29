@@ -1,6 +1,5 @@
 package hello;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class hey {
@@ -51,6 +50,7 @@ public class hey {
 					break;
 			}
 		}
+		scan.close();
 		System.out.println("프로그램 종료");
 	}
 

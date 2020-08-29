@@ -1,5 +1,5 @@
 package hey;
 
 public class goodboy {
-	System.out.println("helle");
+	//System.out.println("helle");
 }

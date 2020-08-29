@@ -12,6 +12,7 @@ public class No11654 {
         int B = scan.nextInt();
 		System.out.println(A+B);
         }
+        scan.close();
 	}
 
 }

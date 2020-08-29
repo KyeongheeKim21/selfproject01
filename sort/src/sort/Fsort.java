@@ -28,7 +28,7 @@ public class Fsort {
 				x[i] = stdIn.nextInt();
 			}while(x[i] < 0);
 		}
-		
+		stdIn.close();
 		int max = x[0];
 		for(int i = 1;i<nx; i++) {
 			if(x[i] > max) max = x[i];

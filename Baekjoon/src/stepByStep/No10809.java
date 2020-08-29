@@ -121,7 +121,7 @@ public class No10809 {
 		Scanner scan = new Scanner(System.in);
 		
 		String s = scan.nextLine();
-		
+		scan.close();
 		for(int i =0; i< table.length ;i++) {
 			table[i] = -1;
 		}

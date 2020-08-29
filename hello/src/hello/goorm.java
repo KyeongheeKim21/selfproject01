@@ -33,7 +33,7 @@ public class goorm {
 			if(sum > 0) System.out.println("+"+sum);
 			else System.out.println(sum);
 		}
-		
+		scan.close();
 	}
 
 }

@@ -1,7 +1,6 @@
 package stepByStep;
 import java.util.Scanner;
 
-import java.util.Scanner;
 
 public class No11720 {
 
@@ -12,7 +11,7 @@ public class No11720 {
 		int x = scan.nextInt();
 		String line = scan.next();
 		int sum = 0;
-		
+		scan.close();
 		
 		for(int i=0; i < x;i++) {
 			sum += line.charAt(i) - 48;

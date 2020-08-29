@@ -6,7 +6,7 @@ package test;
  * 참고 블로그
  * */
 
-import test.DAO;
+//import test.DAO;
 
 public class Main {
 

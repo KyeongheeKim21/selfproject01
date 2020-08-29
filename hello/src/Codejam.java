@@ -28,7 +28,7 @@ public class Codejam {
 		for(int i = 0; i < test;i++) {
 			example[i].solve(i);//System.out.println("case# :"+i);
 		}
-		
+		scan.close();
 	}
 	
 	private void solve(int caseNum) {

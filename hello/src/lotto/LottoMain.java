@@ -2,7 +2,6 @@ package lotto;
 
 import java.util.Scanner;
 import java.util.Vector;
-import lotto.LottoProcess;
 
 public class LottoMain {
 	
@@ -35,7 +34,7 @@ public class LottoMain {
 			if(seed > 45 ) seed = seed % 45;
 			list.add(new LottoProcess(seed, powerball));
 		}
-		
+		scan.close();
 		for(LottoProcess i : list) {
 			i.show();
 		}

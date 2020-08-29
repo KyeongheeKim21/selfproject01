@@ -25,7 +25,7 @@ public class Hanoi {
 			System.out.println("하노이 탑");
 			System.out.println("원반 개수 : ");
 			int ring = stdIn.nextInt();
-			
+			stdIn.close();
 			move(ring,1,3);
 			System.out.println("끝!!");
 	}
