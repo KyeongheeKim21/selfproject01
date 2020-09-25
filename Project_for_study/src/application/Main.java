@@ -3,7 +3,7 @@ package application;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
-import layout.LoginController;
+import layout.Controller;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
@@ -21,7 +21,7 @@ public class Main extends Application {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("../layout/AZ_main.fxml"));
 			Parent root = loader.load();
 			
-			LoginController loginCon = loader.getController();
+			Controller loginCon = loader.getController();
 			loginCon.setPrimaryStage(primaryStage);
 			
 			Scene scene = new Scene(root);

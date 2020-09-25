@@ -5,20 +5,25 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
+import java.util.Collections;
 
-public class No11726 {
-	static int[] dp = new int[1001];
+public class No1427 {
+
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int n = Integer.parseInt(br.readLine());
-		bw.write(dynamic(n)+"\n");
+		String[] str = br.readLine().split("");
+		Integer[] arr = new Integer[str.length];
+		int idx = 0;
+		for(String s: str) {
+			arr[idx++] = Integer.parseInt(s);
+		}
+		Arrays.sort(arr,Collections.reverseOrder());
+		for(Integer i: arr) {
+			bw.write(i+"");
+		}
+		bw.write("\n");
 		bw.flush();
-	}
-	public static int dynamic(int x) {
-		if(x == 1) return 1;
-		if(x == 2) return dp[2] = 2;
-		if(dp[x] != 0) return dp[x];
-		return dp[x] = (dynamic(x-1)+dynamic(x-2))%10007;
 	}
 }

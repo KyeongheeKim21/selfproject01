@@ -5,20 +5,18 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
 
-public class No11726 {
-	static int[] dp = new int[1001];
+public class No15552 {
+
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int n = Integer.parseInt(br.readLine());
-		bw.write(dynamic(n)+"\n");
+		int T = Integer.parseInt(br.readLine());
+		while(T-- > 0) {
+			StringTokenizer str = new StringTokenizer(br.readLine());
+			bw.write(Integer.parseInt(str.nextToken())+ Integer.parseInt(str.nextToken())+"\n");
+		}
 		bw.flush();
-	}
-	public static int dynamic(int x) {
-		if(x == 1) return 1;
-		if(x == 2) return dp[2] = 2;
-		if(dp[x] != 0) return dp[x];
-		return dp[x] = (dynamic(x-1)+dynamic(x-2))%10007;
 	}
 }

@@ -1,25 +1,14 @@
-import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class test {
-	
-	
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner scan = new Scanner(System.in);
-		
-		int test = scan.nextInt();
-		//test[] example = new test[];
-		scan.close();
-		for(int i = 0;i < test; i++) {
+		String x = "A B C D F";
+		StringTokenizer st = new StringTokenizer(x);
+		System.out.println(Integer.toString(1123));
+		try {
+			
+		}catch(NullPointerException e){
 			
 		}
-		
 	}
-	
-	/*private void test() {
-		
-		
-	}*/
-
 }
